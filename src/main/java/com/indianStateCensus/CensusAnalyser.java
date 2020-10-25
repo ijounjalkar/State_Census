@@ -69,6 +69,18 @@ public class CensusAnalyser {
 			}
 		}
 	}
+	private void sortPopulation(Comparator<CSVStateCensus> censusComparator) {
+		for (int i = 0; i < censusCSVList.size(); i++) {
+			for (int j = 0; j < censusCSVList.size() - i - 1; j++) {
+				CSVStateCensus census1 =  censusCSVList.get(j);
+				CSVStateCensus census2 =  censusCSVList.get(j + 1);
+				if (censusComparator.compare(census1, census2) < 0) {
+					censusCSVList.set(j, census2);
+					censusCSVList.set(j + 1, census1);
+				}
+			}
+		}
+	}		
 
 
 }

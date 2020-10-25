@@ -9,8 +9,10 @@ import java.io.IOException;
 import org.junit.Test;
 
 import com.indianStateCensus.CSVBuilderException;
+import com.indianStateCensus.CSVStateCensus;
 import com.indianStateCensus.CensusAnalyser;
 import com.indianStateCensus.CensusAnalyserException;
+import com.indianStateCensus.StateCodeCSV;
 
 import org.junit.jupiter.api.Test;
 
@@ -235,6 +237,24 @@ class CensusAnalyserTest {
 		String sortedCensusData = analyser.getStateCodeWiseSortedCensusData();
 		StateCodeCSV[] censusCSV = new Gson().fromJson(sortedCensusData, StateCodeCSV[].class);
 		assertEquals("West Bengal", censusCSV[censusCSV.length - 1].state);
+	}
+	@Test
+	public void givenIndianCensusData_WhenSortedOnStatePopulation_ShouldReturnSortedResult()
+			throws IOException, CensusAnalyserException, CSVBuilderException {
+		CensusAnalyser analyser = new CensusAnalyser();
+		analyser.loadCSVData(STATECENSUS_CSVFILE);
+		String sortedCensusData = analyser.getPopulationWiseSortedCensusData();
+		CSVStateCensus[] censusCSV = new Gson().fromJson(sortedCensusData, CSVStateCensus[].class);
+		assertEquals("Uttar Pradesh", censusCSV[0].state);
+	}
+	@Test
+	public void givenIndianCensusData_WhenSortedOnStatePopulation_ShouldReturnSortedResultForLast()
+			throws IOException, CensusAnalyserException, CSVBuilderException {
+		CensusAnalyser analyser = new CensusAnalyser();
+		analyser.loadCSVData(STATECENSUS_CSVFILE);
+		String sortedCensusData = analyser.getPopulationWiseSortedCensusData();
+		CSVStateCensus[] censusCSV = new Gson().fromJson(sortedCensusData, CSVStateCensus[].class);
+		assertEquals("Sikkim", censusCSV[censusCSV.length - 1].state);
 	}
 
 }
