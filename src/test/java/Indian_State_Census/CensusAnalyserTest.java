@@ -220,5 +220,21 @@ class CensusAnalyserTest {
 		CSVStateCensus[] censusCSV = new Gson().fromJson(sortedCensusData, CSVStateCensus[].class);
 		assertEquals("West Bengal", censusCSV[censusCSV.length - 1].state);
 	}
+	/**
+	 * TestCase for Usecase4 Sorting StateCode CSV File data
+	 * 
+	 * @throws IOException
+	 * @throws CensusAnalyserException
+	 * @throws CSVBuilderException
+	 */
+	@Test
+	public void givenIndianCensusData_WhenSortedOnStateCode_ShouldReturnSortedResultForLastState()
+			throws IOException, CensusAnalyserException, CSVBuilderException {
+		CensusAnalyser analyser = new CensusAnalyser();
+		analyser.loadIndianStateCode(STATE_CODE_CSV);
+		String sortedCensusData = analyser.getStateCodeWiseSortedCensusData();
+		StateCodeCSV[] censusCSV = new Gson().fromJson(sortedCensusData, StateCodeCSV[].class);
+		assertEquals("West Bengal", censusCSV[censusCSV.length - 1].state);
+	}
 
 }

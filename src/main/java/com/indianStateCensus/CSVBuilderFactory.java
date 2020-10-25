@@ -1,4 +1,4 @@
-package Indian_State_Census;
+package com.indianStateCensus;
 
 public class CSVBuilderFactory {
 	public static <E> ICSVBuilder createCSVBuilder() {

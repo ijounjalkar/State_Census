@@ -1,4 +1,4 @@
-package Indian_State_Census;
+package com.indianStateCensus;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -52,12 +52,12 @@ public class CensusAnalyser {
 			throw new CensusAnalyserException("No Census Data", CensusAnalyserException.ExceptionType.NO_CENSUS_DATA);
 		}
 		Comparator<CSVStateCensus> censusComparator = Comparator.comparing(census -> census.state);
-		this.sort(censusComparator);
+		this.sort(censusCSVList, censusComparator);
 		String sortedStateCensusJson = new Gson().toJson(censusCSVList);
 		return sortedStateCensusJson;
 	}
 
-	private void sort(Comparator<CSVStateCensus> censusComparator) {
+	private void sort(List<E> cnesusList, Comparator<E> censusComparator) {
 		for (int i = 0; i < censusCSVList.size(); i++) {
 			for (int j = 0; j < censusCSVList.size() - i - 1; j++) {
 				CSVStateCensus census1 = censusCSVList.get(j);

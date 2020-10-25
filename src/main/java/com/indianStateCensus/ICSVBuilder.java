@@ -1,4 +1,4 @@
-package Indian_State_Census;
+package com.indianStateCensus;
 
 import java.io.Reader;
 import java.util.Iterator;

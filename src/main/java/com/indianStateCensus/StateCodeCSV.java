@@ -1,4 +1,4 @@
-package Indian_State_Census;
+package com.indianStateCensus;
 import com.opencsv.bean.CsvBindByName;
 
 public class StateCodeCSV {
