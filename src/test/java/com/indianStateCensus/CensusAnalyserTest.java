@@ -1,28 +1,23 @@
-package Indian_State_Census;
+package com.indianStateCensus;
 
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
 
 import org.junit.Test;
 
-import com.indianStateCensus.CSVBuilderException;
-import com.indianStateCensus.CSVStateCensus;
-import com.indianStateCensus.CensusAnalyser;
-import com.indianStateCensus.CensusAnalyserException;
-import com.indianStateCensus.StateCodeCSV;
+import com.google.gson.Gson;
 
-import org.junit.jupiter.api.Test;
+import CSVReader.CSVBuilderException;
 
-class CensusAnalyserTest {
+public class CensusAnalyserTest {
 
-	private static final String STATECENSUS_CSVFILE = "C:\\Users\\adity\\eclipse-workspace\\Indian State Census\\IndiaStateCensusData.csv";
-	private static final String WRONG_FILE = "C:\\Users\\adity\\eclipse-workspace\\Indian StateCensus\\IndiaStateCensusData.csv";
-	private static final String WRONG_EXTENSION = "C:\\Users\\adity\\eclipse-workspace\\Indian State Census\\IndiaStateCensusData.txt";
-	private static final String CSVFILE = "C:\\Users\\adity\\eclipse-workspace\\Indian State Census\\USCensusData.csv";
-	private static final String STATE_CODE_CSV = "C:\\Users\\adity\\eclipse-workspace\\Indian State Census\\IndiaStateCode.csv";
+	private static final String STATECENSUS_CSVFILE = "C:\\Users\\ADMIN\\eclipse-workspace\\Indian_State_Census\\IndianStateCensusData.csv";
+	private static final String WRONG_FILE = "C:\\Users\\ADMIN\\eclipse-workspace\\Indian StateCensus\\IndiaStateCensusData.csv";
+	private static final String WRONG_EXTENSION = "C:\\Users\\ADMIN\\eclipse-workspace\\Indian State Census\\IndiaStateCensusData.txt";
+	private static final String CSVFILE = "C:\\Users\\ADMIN\\eclipse-workspace\\Indian State Census\\USCensusData.csv";
+	private static final String STATE_CODE_CSV = "C:\\Users\\ADMIN\\eclipse-workspace\\Indian State Census\\IndiaStateCode.csv";
 
 	/**
 	 * UC1TestCase1
