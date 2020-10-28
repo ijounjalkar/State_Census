@@ -15,11 +15,11 @@ import org.junit.jupiter.api.Test;
 
 class CensusAnalyserTest {
 
-	private static final String STATECENSUS_CSVFILE = "C:\\Users\\adity\\eclipse-workspace\\Indian State Census\\IndiaStateCensusData.csv";
-	private static final String WRONG_FILE = "C:\\Users\\adity\\eclipse-workspace\\Indian StateCensus\\IndiaStateCensusData.csv";
-	private static final String WRONG_EXTENSION = "C:\\Users\\adity\\eclipse-workspace\\Indian State Census\\IndiaStateCensusData.txt";
-	private static final String CSVFILE = "C:\\Users\\adity\\eclipse-workspace\\Indian State Census\\USCensusData.csv";
-	private static final String STATE_CODE_CSV = "C:\\Users\\adity\\eclipse-workspace\\Indian State Census\\IndiaStateCode.csv";
+	private static final String STATECENSUS_CSVFILE = "C:\\Users\\ADMIN\\eclipse-workspace\\Indian_State_Census\\IndianStateCensusData.csv";
+	private static final String WRONG_FILE = "C:\\Users\\ADMIN\\eclipse-workspace\\Indian StateCensus\\IndiaStateCensusData.csv";
+	private static final String WRONG_EXTENSION = "C:\\Users\\ADMIN\\eclipse-workspace\\Indian State Census\\IndiaStateCensusData.txt";
+	private static final String CSVFILE = "C:\\Users\\ADMIN\\eclipse-workspace\\Indian State Census\\USCensusData.csv";
+	private static final String STATE_CODE_CSV = "C:\\Users\\ADMIN\\eclipse-workspace\\Indian State Census\\IndiaStateCode.csv";
 
 	/**
 	 * UC1TestCase1
