@@ -2,6 +2,7 @@ package com.indianStateCensus;
 import com.opencsv.bean.CsvBindByName;
 
 public class StateCodeCSV {
+	
 	@CsvBindByName(column = "State Name",required = true)
 	public String state;
 	
@@ -12,5 +13,4 @@ public class StateCodeCSV {
 	public String toString() {
 		return "StateCodeCSV [state=" + state + ", stateCode=" + stateCode + "]";
 	}
-
 }
